@@ -12,3 +12,4 @@ export const STOP_LOADING_UI = "STOP_LOADING_UI";
 
 //device reducer
 export const FETCH_DEVICES = "FETCH_DEVICES";
+export const FETCH_DEVICE = "FETCH_DEVICE";
