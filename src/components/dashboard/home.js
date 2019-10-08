@@ -19,7 +19,7 @@ class home extends Component {
 
 //set the propTypes
 // eslint-disable-next-line react/no-typos
-home.PropTypes = {
+home.propTypes = {
   getDevices: PropTypes.func.isRequired,
   devices: PropTypes.array.isRequired
 };
