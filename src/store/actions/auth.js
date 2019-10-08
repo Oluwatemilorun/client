@@ -14,7 +14,6 @@ export const loginUser = (userData, history) => dispatch => {
   axios
     .post("/login", userData)
     .then(res => {
-      // eslint-disable-next-line no-undef
       setAuthorizationHeader(res.data.token);
       dispatch(getUserData());
       dispatch({ type: CLEAR_ERRORS });
@@ -56,7 +55,6 @@ export const signUpUser = (newUserData, history) => dispatch => {
   axios
     .post("/signup", newUserData)
     .then(res => {
-      // eslint-disable-next-line no-undef
       setAuthorizationHeader(res.data.token);
       dispatch(getUserData());
       dispatch({ type: CLEAR_ERRORS });
@@ -68,4 +66,10 @@ export const signUpUser = (newUserData, history) => dispatch => {
         payload: err.response.data
       });
     });
+};
+
+const setAuthorizationHeader = token => {
+  const FBIdToken = `Bearer ${token}`;
+  localStorage.setItem("FBIdtoken", FBIdToken);
+  axios.defaults.headers.common["Authorization"] = FBIdToken;
 };
