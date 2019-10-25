@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "module": "commonjs",
+        "target": "esnext",
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "jsx": "react",
+        "paths": {
+            "@/*": ["./*"]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        ".next"
+    ]
+}

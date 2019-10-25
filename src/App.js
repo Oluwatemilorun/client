@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
-import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import {
+  MuiThemeProvider,
+  createMuiTheme
+} from "@material-ui/core/styles";
 
 //redux get Provider to provide the store to the application
 import { Provider } from "react-redux";
