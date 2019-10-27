@@ -1,13 +1,13 @@
-import React, { ComponentPropsWithRef } from 'react'
+import React from 'react'
 
-import { 
+import {
 	Grid,
 	Container
-} from "@material-ui/core"
+} from '@material-ui/core'
 
 import { Styles } from './style'
 
-export const BlankLayout = (props: ComponentPropsWithRef<'main'>) => {
+const BlankLayout = (props) => {
 	const styles = Styles()
 
 	return (
@@ -18,3 +18,5 @@ export const BlankLayout = (props: ComponentPropsWithRef<'main'>) => {
 		</Grid>
 	);
 }
+
+export default BlankLayout

@@ -6,7 +6,7 @@ import {
 	Grid
 } from '@material-ui/core'
 
-export class DefaultLayout extends Component {
+export default class DefaultLayout extends Component {
 
 	static getInitialProps = ({ res, err }) => {
 		// On the server-side you can check authentication status directly
@@ -15,10 +15,10 @@ export class DefaultLayout extends Component {
 		if (typeof window === 'undefined') {
 			const user = {}
 			if (!user) {
-				res.writeHead(302, {
+				reswriteHead(302, {
 					Location: '/api/login'
 				})
-				res.end()
+				resend()
 				return
 			}
 			return { user }
@@ -35,10 +35,10 @@ export class DefaultLayout extends Component {
 		// A redirect is needed to authenticate to Auth0
 		if (!user) {
 			if (typeof window === 'undefined') {
-				res.writeHead(302, {
+				reswriteHead(302, {
 					Location: '/api/login'
 				})
-				return res.end()
+				return resend()
 			}
 
 			window.location.href = '/'

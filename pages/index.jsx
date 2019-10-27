@@ -6,7 +6,7 @@ import {
 	Button
 } from '@material-ui/core'
 
-import { BlankLayout } from '@/layouts'
+import BlankLayout from '@/layouts/blank'
 import { Theme } from '@/lib/theme'
 
 const Home = () => {

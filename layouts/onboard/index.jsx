@@ -1,17 +1,13 @@
-import React, { ComponentPropsWithRef } from 'react'
+import React from 'react'
 
 import {
 	Grid,
 	Container
-} from "@material-ui/core"
+} from '@material-ui/core'
 
 import { Styles } from './style'
 
-interface AuthLayerProps extends ComponentPropsWithRef<'main'> {
-	background: string
-}
-
-export const AuthLayout = (props: AuthLayerProps) => {
+export const AuthLayout = (props) => {
 	const styles = Styles()
 
 	return (
@@ -33,3 +29,5 @@ export const AuthLayout = (props: AuthLayerProps) => {
 		</Grid>
 	)
 }
+
+export default AuthLayout

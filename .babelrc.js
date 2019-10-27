@@ -3,8 +3,13 @@ module.exports = function (api) {
 
 	return {
 		"presets": [
-			"react-app",
-			"next/babel"
+			// "react-app",
+			[
+				"next/babel",
+				{
+					"preset-env": { "targets": { "node": "current" } }
+				}
+			]
 		],
 		"plugins": [
 			[
@@ -13,6 +18,24 @@ module.exports = function (api) {
 					"rootPathSuffix": "./",
 					"rootPathPrefix": "@/"
 				}
+			],
+			[
+				'babel-plugin-import',
+				{
+					'libraryName': '@material-ui/core',
+					'libraryDirectory': '',
+					'camel2DashComponentName': false
+				},
+				'core'
+			],
+			[
+				'babel-plugin-import',
+				{
+					'libraryName': '@material-ui/icons',
+					'libraryDirectory': '',
+					'camel2DashComponentName': false
+				},
+				'icons'
 			]
 		]
 	};

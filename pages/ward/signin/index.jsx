@@ -1,5 +1,4 @@
-import React, { ComponentProps } from 'react'
-import { NextPage } from 'next'
+import React from 'react'
 
 import {
 	Grid,
@@ -8,12 +7,10 @@ import {
 	Button
 } from '@material-ui/core'
 
-import { AuthLayout } from '@/layouts'
+import AuthLayout from '@/layouts/onboard'
 import { Styles } from './style'
 
 import * as bg from '@/assets/img/bg/006.svg'
-
-// interface SigninPage
 
 const WardSignin = () => {
 	const styles = Styles()

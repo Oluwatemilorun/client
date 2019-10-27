@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import _Head from 'next/head'
+
+import {Head as _Head} from 'next/document'
 
 export class Head extends Component {
 	render() {
