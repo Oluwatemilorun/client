@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.5.1",
+    "@material-ui/icons": "^4.5.1",
     "@mdi/font": "^4.5.95",
+    "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "babel-plugin-root-import": "^6.4.1",
     "babel-preset-react-app": "^9.0.2",
