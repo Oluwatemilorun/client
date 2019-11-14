@@ -4,7 +4,7 @@ import { makeStyles, createStyles, Theme as _Theme } from '@material-ui/core/sty
 export const Styles = makeStyles(({ palette }) =>
 	createStyles({
 		wrapper: {
-			backgroundColor: palette.background.default,
+			backgroundColor: '#fff',
 			backgroundRepeat: 'no-repeat',
 			height: '100vh',
 			width: '100vw'
