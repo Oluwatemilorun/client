@@ -1,4 +1,4 @@
-import React, { ComponentProps } from 'react'
+import React, { useState } from 'react'
 
 import {
 	Grid,
@@ -8,21 +8,24 @@ import {
 } from '@material-ui/core'
 
 import AuthLayout from '@/layouts/onboard'
+import { Alert } from '@/components'
 import { Styles } from './style'
 
 import * as bg from '@/assets/img/bg/005.svg'
 
 const ManagementSignin = () => {
-	const styles = Styles()
+    const styles = Styles()
+    
+    const [showAlert, toggleAlert] = useState(true)
 
 	return (
 		<AuthLayout background={bg}>
-			<Grid item xs>
+			<Grid xs>
 				<Grid item xs={12}>
 					<Typography color="primary" variant="h6" className={styles.subheading}>Welcome Back!</Typography>
 				</Grid>
 				<Grid item xs={12}>
-					<Typography variant="h3" className={styles.title}>Management Sign In</Typography>
+					<Typography variant="h3" className={styles.title}>Management Registration</Typography>
 				</Grid>
 				<Grid container item xs={12} spacing={2}>
 					<Grid item xs={12} md={6}>
@@ -41,7 +44,9 @@ const ManagementSignin = () => {
 						/>
 					</Grid>
 					<Grid item xs={12} md={4}>
-						<Button variant="contained" fullWidth color="primary" size="large" style={{ color: '#fff' }}>
+						<Button variant="contained" fullWidth color="primary" size="large" style={{ color: '#fff' }} onClick={
+                            () => toggleAlert((prevState) => !prevState)
+                        }>
 							sign in
 						</Button>
 					</Grid>
@@ -53,6 +58,10 @@ const ManagementSignin = () => {
 				</Typography>
 				<Button variant="text" size="small" color="primary" href="/management/signup">Sign up</Button>
 			</Grid>
+
+            <Alert open={showAlert} title="Confirmation mail sent" icon="mdi-check-circle">
+
+            </Alert>
 		</AuthLayout>
 	)
 }
