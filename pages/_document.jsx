@@ -61,6 +61,11 @@ export default class RealDripDocument extends Document {
 					/>
 					{/* PWA primary color */}
 					<meta name="theme-color" content={Theme.palette.primary.main} />
+					
+					<link
+						rel="stylesheet"
+						href="/icon/mdi/css/materialdesignicons.css"
+					/>
 					{/* <link
 						rel="stylesheet"
 						href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"

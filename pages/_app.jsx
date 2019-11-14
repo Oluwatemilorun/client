@@ -4,7 +4,7 @@ import App from 'next/app'
 import { ThemeProvider } from '@material-ui/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 
-// import { Head } from '@/components'
+import { Head } from '@/components'
 import { Theme, getPageContext } from '@/lib'
 
 export default class RealDripApp extends App {
@@ -29,7 +29,7 @@ export default class RealDripApp extends App {
 
 		return (
 			<React.Fragment>
-				{/* <Head title={'Welcome'}></Head> */}
+				<Head title={'Welcome'}></Head>
 				<ThemeProvider theme={Theme}>
 					{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
 					<CssBaseline />

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
-import {Head as _Head} from 'next/document'
+import _Head from 'next/head'
+
+// import '@mdi/font/css/materialdesignicons.css'
 
 export class Head extends Component {
 	render() {
@@ -19,6 +21,7 @@ export class Head extends Component {
 				<meta property="og:site_name" content="Real Drip" />
 				<title>{this.props.title} | Real Drip</title>
 				{/* <link rel="manifest" href="../manifest.json" /> */}
+				<link rel="stylesheet" href="/icon/mdi/css/materialdesignicons.css" />
 			</_Head>
 		)
 	}
