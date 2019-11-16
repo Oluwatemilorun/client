@@ -2,7 +2,8 @@ import React from 'react'
 
 import {
 	Grid,
-	Container
+	Container,
+	Hidden
 } from '@material-ui/core'
 
 import { Styles } from './style'
@@ -12,16 +13,17 @@ export const AuthLayout = (props) => {
 
 	return (
 		<Grid container className={styles.wrapper}>
-			<Grid
-				container
-				item
-				xs={false} md={6}
-				className={styles.backgroundWrapper}
-				style={{ backgroundImage: `url(${props.background})` }}
-			/>
+			<Hidden smDown>
+				<Grid container item md={6} className={styles.controlBackgroundWrapper}>
+					<Grid
+						className={styles.backgroundWrapper}
+						style={{ backgroundImage: `url(${props.background})` }}
+					/>
+				</Grid>
+			</Hidden>
 			<Grid container item xs={12} md={6}>
 				<Container>
-					<Grid container justify="space-between" alignItems="stretch" direction="column" className={styles.contentWrapper}>
+					<Grid container justify="space-between" alignItems="stretch" direction="column" className={styles.contentWrapper} wrap="nowrap">
 						{props.children}
 					</Grid>
 				</Container>
