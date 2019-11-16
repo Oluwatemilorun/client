@@ -22,7 +22,7 @@ const Home = () => {
 				</Typography>
 				<Grid container justify="center" spacing={2}>
 					<Grid item xs={12} sm={6} md={2}>
-						<Button variant="contained" fullWidth style={{ color: Theme.palette.primary.main, backgroundColor: '#fff' }} href="/management/signin">
+						<Button variant="contained" fullWidth style={{ color: Theme.palette.primary.main, backgroundColor: '#fff' }} href="/management/account/signin">
 							Management
 						</Button>
 					</Grid>
