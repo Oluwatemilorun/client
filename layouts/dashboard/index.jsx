@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Router from 'next/Router'
 
 import {
-    Container
+    Grid
 } from '@material-ui/core'
 
 import { Drawer, Appbar } from '@/components'
@@ -17,9 +17,9 @@ export const DashboardLayout = (props) => {
             <Drawer accountType={props.accountType} />
             <main className={styles.content}>
                 <div className={styles.appBarSpacer} />
-                <Container maxWidth="lg" className={styles.container}>
+                <Grid className={styles.container}>
                     {props.children}
-                </Container>
+                </Grid>
             </main>
         </div>
     )

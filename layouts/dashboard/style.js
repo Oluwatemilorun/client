@@ -9,11 +9,11 @@ export const Styles = makeStyles((theme) =>
         content: {
             flexGrow: 1,
             height: '100vh',
-            overflow: 'auto',
+			overflow: 'auto',
+			paddingLeft: 76,
         },
         container: {
-            paddingTop: theme.spacing(4),
-            paddingBottom: theme.spacing(4),
+			padding: theme.spacing(4)
         },
         paper: {
             padding: theme.spacing(2),
