@@ -49,15 +49,30 @@ export const Alert = (props) => {
 
     const styles = Styles()
 
-    const handleClose = () => {
-        // props.open = false
-    }
+	const closeDialog = () => {
+		setOpen(false)
+		if (props.onClose) props.onClose()
+	}
+
+	const handleBackdropclick = () => {
+		if (props.fixed) return
+		else closeDialog()
+	}
+
+	const handleEscapeKeyDown = () => {
+		if (props.fixed) return
+		closeDialog()
+	}
 
     return (
         <EditedDialog
             {...props}
             open={props.open}
-            aria-labelledby={`${props.title.replace(/ /g, ), '-'}-alert-dialog`}
+			onClose={closeDialog}
+			onRendered={props.onOpen}
+			onBackdropClick={handleBackdropclick}
+			onEscapeKeyDown={handleEscapeKeyDown}
+			aria-labelledby={`${props.title.replace(/ /g, ), '-'}-alert-dialog`}
         >
             <Grid container alignItems="flex-start" className={styles.wrapper}>
                 <Grid container item direction="column" justify="center" alignItems="center" xs={12}>

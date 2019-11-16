@@ -13,7 +13,6 @@ export class login extends Component {
       <div>
         <h1>Login Page</h1>
       </div>
-    
     );
   }
 }
