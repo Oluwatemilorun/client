@@ -44,7 +44,7 @@ export const Appbar = (props) => {
         <div>
             <AppBar elevation={1} color="#fff">
                 <Toolbar 
-                    variant="dense"
+                    // variant="dense"
                     className={styles.toolbar}
                 >
                     

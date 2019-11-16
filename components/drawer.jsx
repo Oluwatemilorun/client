@@ -72,50 +72,42 @@ const Styles = makeStyles(
             }
         }),
     { name: "drawer-component" }
-);
+)
 
 const MangemementDrawerItems = (
-	<div>
-		<ListItem button>
-			<ListItemIcon>
-				<SvgIcon>
-					<DashboardIcon />
-				</SvgIcon>
-			</ListItemIcon>
-			<ListItemText primary="Home" />
-		</ListItem>
-		<ListItem button>
-			<ListItemIcon>
-				<SvgIcon>
-					<MedicalRoomIcon />
-				</SvgIcon>
-			</ListItemIcon>
-			<ListItemText primary="Operations" />
-		</ListItem>
-		<ListItem button>
-			<ListItemIcon>
-				<SvgIcon>
-					<DevicesIcon />
-				</SvgIcon>
-			</ListItemIcon>
-			<ListItemText primary="Devices" />
-		</ListItem>
-		<ListItem button>
-			<ListItemIcon>
-				<SvgIcon>
-					<NurseIcon />
-				</SvgIcon>
-			</ListItemIcon>
-			<ListItemText primary="Nurses" />
-		</ListItem>
-		<ListItem button>
-			<ListItemIcon>
-				<SettingsIcon />
-			</ListItemIcon>
-			<ListItemText primary="Account" />
-		</ListItem>
-	</div>
-)
+    <div>
+        <ListItem button>
+            <ListItemIcon>
+				<DashboardIcon color="primary" />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+        </ListItem>
+        <ListItem button>
+            <ListItemIcon>
+				<MedicalRoomIcon />
+            </ListItemIcon>
+            <ListItemText primary="Operations" />
+        </ListItem>
+        <ListItem button>
+            <ListItemIcon>
+				<DevicesIcon />
+            </ListItemIcon>
+            <ListItemText primary="Devices" />
+        </ListItem>
+        <ListItem button>
+            <ListItemIcon>
+				<NurseIcon />
+            </ListItemIcon>
+            <ListItemText primary="Nurses" />
+        </ListItem>
+        <ListItem button>
+            <ListItemIcon>
+                <SettingsIcon />
+            </ListItemIcon>
+            <ListItemText primary="Account" />
+        </ListItem>
+    </div>
+);
 
 const WardDrawerItems = (
 	<div>
@@ -161,7 +153,7 @@ export const Drawer = (props) => {
             }}
             open={drawerOpen}
         >
-            <AppBar position="absolute" elevation={0} color="transparent">
+            <AppBar position="relative" elevation={0} color="transparent">
                 <Toolbar variant="dense" disableGutters>
                     <IconButton
                         edge="start"
